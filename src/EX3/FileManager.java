@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class FileManager {
 
-    public HashMap<String, String> loadCountries (String filePath) {
+    public HashMap<String, String> loadCountries(String filePath) {
         HashMap<String, String> countriesCapitals = new HashMap<>();
 
         File file = new File("src/EX3/" + filePath);
@@ -14,7 +14,7 @@ public class FileManager {
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = br.readLine()) != null) {
-                String[] parts = line.split(" ",2);
+                String[] parts = line.split(" ", 2);
                 if (parts.length == 2) {
                     countriesCapitals.put(parts[0].trim(), parts[1].trim());
                 }
@@ -25,7 +25,7 @@ public class FileManager {
         }
         return countriesCapitals;
     }
-    // ESTE método es el que necesitas para que el saveScore funcione:
+
     public void saveScore(String filePath, String username, int score) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath, true))) {
             bw.write(username + ", " + score);

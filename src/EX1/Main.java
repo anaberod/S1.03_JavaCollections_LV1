@@ -29,7 +29,7 @@ public class Main {
             System.out.println(m);
         }
 
-        Set <Month> monthSet = new HashSet<>(months);
+        Set<Month> monthSet = new HashSet<>(months);
         monthSet.add(new Month("December"));
         monthSet.add(new Month("February"));
         System.out.println("\nHashSet without duplicates: ");
@@ -38,19 +38,15 @@ public class Main {
         }
 
         System.out.println("\nTraversal with for loop (index):");
-        for (int i = 0; i < months.size(); i ++) {
+        for (int i = 0; i < months.size(); i++) {
             System.out.println(months.get(i));
 
         }
         System.out.println("\nIterating through HashSet with Iterator:");
-        Iterator <Month> monthIterator = monthSet.iterator();
+        Iterator<Month> monthIterator = monthSet.iterator();
         while (monthIterator.hasNext()) {
             System.out.println(monthIterator.next());
         }
-
-
-
-
 
 
     }

@@ -1,4 +1,0 @@
-ana, 3
-marta, 6
-ana, 5
-Ana, 2
